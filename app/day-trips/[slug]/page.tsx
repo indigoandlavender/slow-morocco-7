@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Clock, MapPin, Mountain } from "lucide-react";
 import DayTripBookingModal from "@/components/DayTripBookingModal";
+import AgafayRouteMap from "@/components/AgafayRouteMap";
 
 interface DayTrip {
   slug: string;
@@ -154,7 +155,7 @@ export default function DayTripDetailPage() {
           </p>
 
           {/* Narrative */}
-          <div className="prose prose-lg max-w-none mb-16">
+          <div className="prose prose-lg max-w-none mb-12">
             {narrativeParagraphs.map((paragraph, index) => (
               <p
                 key={index}
@@ -164,6 +165,11 @@ export default function DayTripDetailPage() {
               </p>
             ))}
           </div>
+
+          {/* Agafay Route Map - only for Agafay day trip */}
+          {slug === "agafay-desert" && (
+            <AgafayRouteMap className="mb-12" />
+          )}
 
           {/* Via Cities */}
           {dayTrip.viaCities && (

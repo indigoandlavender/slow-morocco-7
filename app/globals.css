@@ -368,3 +368,20 @@ a:focus,
 button:focus {
   outline: none;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   GLOSSARY LINKS
+   Subtle styling for auto-linked glossary terms
+   ═══════════════════════════════════════════════════════════════ */
+
+.glossary-link {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: hsl(var(--foreground) / 0.3);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+
+.glossary-link:hover {
+  text-decoration-color: hsl(var(--foreground) / 0.6);
+}

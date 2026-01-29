@@ -72,7 +72,7 @@ export default function DayTripsPage() {
         <div className="container mx-auto px-6 lg:px-16">
           {loading ? (
             <div className="flex justify-center py-20">
-              <div className="w-8 h-8 border border-foreground/20 border-t-white/60 rounded-full animate-spin" />
+              <div className="w-8 h-8 border border-foreground/20 border-t-foreground/60 rounded-full animate-spin" />
             </div>
           ) : dayTrips.length === 0 ? (
             <div className="text-center py-20">
@@ -97,19 +97,19 @@ export default function DayTripsPage() {
                     )}
                     {/* Category badge */}
                     <div className="absolute top-4 left-4">
-                      <span className="text-[10px] tracking-[0.15em] uppercase bg-black/60 backdrop-blur-sm px-3 py-1.5 text-foreground/80">
+                      <span className="text-[10px] tracking-[0.15em] uppercase bg-black/60 backdrop-blur-sm px-3 py-1.5 text-white/90">
                         {trip.category}
                       </span>
                     </div>
                   </div>
                   
-                  <h2 className="font-serif text-xl md:text-2xl mb-3 text-white/90 group-hover:text-foreground/70 transition-colors">
+                  <h2 className="font-serif text-xl md:text-2xl mb-3 text-foreground group-hover:text-foreground/70 transition-colors">
                     {trip.title}
                   </h2>
                   
                   <div className="flex items-center gap-3 text-sm text-foreground/40 mb-4">
                     <span>{trip.durationHours} hours</span>
-                    <span className="text-white/20">·</span>
+                    <span className="text-foreground/20">·</span>
                     <span>From €{trip.priceEUR}</span>
                   </div>
                   
@@ -157,21 +157,21 @@ export default function DayTripsPage() {
             </div>
             
             {/* Not Included - Darker */}
-            <div className="py-20 md:py-28 px-6 lg:px-16 bg-[#050505]">
-              <p className="text-xs tracking-[0.3em] uppercase text-foreground/40 mb-8">
+            <div className="py-20 md:py-28 px-6 lg:px-16 bg-[#1a1916]">
+              <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-8">
                 Not Included
               </p>
               <ul className="space-y-4">
-                <li className="text-foreground/40 text-lg flex items-start gap-3">
-                  <span className="text-white/20 mt-1">×</span>
+                <li className="text-white/60 text-lg flex items-start gap-3">
+                  <span className="text-white/30 mt-1">×</span>
                   <span>Lunch (can be added)</span>
                 </li>
-                <li className="text-foreground/40 text-lg flex items-start gap-3">
-                  <span className="text-white/20 mt-1">×</span>
+                <li className="text-white/60 text-lg flex items-start gap-3">
+                  <span className="text-white/30 mt-1">×</span>
                   <span>Entrance fees to sites</span>
                 </li>
-                <li className="text-foreground/40 text-lg flex items-start gap-3">
-                  <span className="text-white/20 mt-1">×</span>
+                <li className="text-white/60 text-lg flex items-start gap-3">
+                  <span className="text-white/30 mt-1">×</span>
                   <span>Tips for driver</span>
                 </li>
               </ul>
@@ -183,7 +183,7 @@ export default function DayTripsPage() {
       {/* CTA Section */}
       <section className="py-24 md:py-32 bg-background border-t border-foreground/10">
         <div className="container mx-auto px-6 lg:px-16 max-w-3xl text-center">
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-8 text-white/90">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-8 text-foreground">
             Not sure which tour?
           </h2>
           <p className="text-foreground/50 leading-relaxed mb-12 text-lg">
