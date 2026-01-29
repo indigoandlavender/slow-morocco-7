@@ -19,6 +19,8 @@ const STATIC_PAGES = [
   { path: '/day-trips', priority: 0.7, changeFrequency: 'weekly' as const },
   { path: '/guides', priority: 0.6, changeFrequency: 'monthly' as const },
   { path: '/epic', priority: 0.8, changeFrequency: 'weekly' as const },
+  { path: '/glossary', priority: 0.7, changeFrequency: 'monthly' as const },
+  { path: '/overnight/agafay-desert', priority: 0.8, changeFrequency: 'monthly' as const },
 ]
 
 async function getDynamicPages() {

@@ -210,7 +210,7 @@ export default function PlacesContent() {
         <div className="container mx-auto px-6 lg:px-16">
           {loading ? (
             <div className="flex justify-center py-20">
-              <div className="w-8 h-8 border-2 border-foreground/20 border-t-white rounded-full animate-spin" />
+              <div className="w-8 h-8 border-2 border-foreground/20 border-t-foreground rounded-full animate-spin" />
             </div>
           ) : filteredPlaces.length > 0 ? (
             <>
@@ -239,7 +239,7 @@ export default function PlacesContent() {
                       <p className="text-[10px] tracking-[0.15em] uppercase text-foreground/40 mb-1">
                         {dest?.title || place.destination}
                       </p>
-                      <h2 className="font-serif text-base md:text-lg text-white/90 group-hover:text-foreground transition-colors">
+                      <h2 className="font-serif text-base md:text-lg text-foreground group-hover:text-foreground/70 transition-colors">
                         {place.title}
                       </h2>
                     </Link>

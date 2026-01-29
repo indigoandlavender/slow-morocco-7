@@ -20,7 +20,7 @@ function PlacesLoading() {
         </div>
       </section>
       <div className="flex justify-center py-20">
-        <div className="w-8 h-8 border-2 border-foreground/20 border-t-white rounded-full animate-spin" />
+        <div className="w-8 h-8 border-2 border-foreground/20 border-t-foreground rounded-full animate-spin" />
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import StoryBody from "@/components/StoryBody";
+import ShareTools from "@/components/ShareTools";
 
 interface Story {
   slug: string;
@@ -467,10 +468,16 @@ export default function StoryPage() {
 
         {/* Footer */}
         <hr className="border-foreground/10 my-12" />
-        <footer className="text-sm text-foreground/40 flex flex-wrap gap-x-4 gap-y-1">
+        <footer className="text-sm text-foreground/40 flex flex-wrap items-center gap-x-4 gap-y-2">
           {story.textBy && <span>Text — {story.textBy}</span>}
           {story.imagesBy && <span>Images — {story.imagesBy}</span>}
           {story.year && <span>{story.year}</span>}
+          <span className="hidden md:inline">·</span>
+          <ShareTools 
+            title={story.title} 
+            description={story.subtitle || story.excerpt}
+            imageUrl={story.heroImage}
+          />
         </footer>
 
         {/* Related Stories */}

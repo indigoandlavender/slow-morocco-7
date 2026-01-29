@@ -22,6 +22,7 @@ import {
   Icon4x4,
   IconStar,
 } from "@/components/icons";
+import ShareTools from "@/components/ShareTools";
 
 // Map activity keywords to icons
 const getActivityIcon = (activity: string) => {
@@ -467,14 +468,21 @@ export default function JourneyDetailPage() {
       {/* Content */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
-          {/* Back Link */}
-          <Link
-            href="/journeys"
-            className="inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase text-muted-foreground hover:text-foreground transition-colors mb-12"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to All Journeys
-          </Link>
+          {/* Back Link & Share */}
+          <div className="flex items-center justify-between mb-12">
+            <Link
+              href="/journeys"
+              className="inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to All Journeys
+            </Link>
+            <ShareTools 
+              title={journey.title}
+              description={journey.arcDescription || journey.description}
+              imageUrl={journey.heroImage}
+            />
+          </div>
 
           {/* Duration & Price */}
           <div className="flex items-baseline gap-6 mb-4">
