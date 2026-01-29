@@ -1,5 +1,7 @@
 'use client';
 
+import { linkGlossaryTermsText } from '@/lib/glossary-linker';
+
 interface StoryBodyProps {
   content: string;
 }
@@ -21,7 +23,7 @@ export default function StoryBody({ content }: StoryBodyProps) {
               key={index}
               className="border-l-2 border-foreground/20 pl-6 my-8 text-xl italic text-foreground/70"
             >
-              {quoteText}
+              {linkGlossaryTermsText(quoteText)}
             </blockquote>
           );
         }
@@ -39,13 +41,13 @@ export default function StoryBody({ content }: StoryBodyProps) {
           );
         }
 
-        // Regular paragraph
+        // Regular paragraph - link glossary terms
         return (
           <p
             key={index}
             className="text-foreground/70 leading-relaxed mb-6"
           >
-            {paragraph}
+            {linkGlossaryTermsText(paragraph)}
           </p>
         );
       })}
