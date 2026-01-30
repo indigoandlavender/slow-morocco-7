@@ -1,46 +1,32 @@
 {
-  "name": "moroccan-art-platform",
+  "name": "slow-morocco",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push",
-    "db:migrate": "prisma migrate dev",
-    "db:seed": "tsx prisma/seed.ts",
-    "db:reset": "prisma migrate reset",
-    "db:studio": "prisma studio",
-    "seed:sheets": "tsx scripts/seed-sheets.ts"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^5.22.0",
-    "dotenv": "^17.2.3",
-    "googleapis": "^170.1.0",
-    "mapbox-gl": "^3.9.3",
-    "next": "15.1.9",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "googleapis": "^144.0.0",
+    "lucide-react": "^0.468.0",
+    "mapbox-gl": "^3.3.0",
+    "next": "14.2.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "resend": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/mapbox-gl": "^3.1.0",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.6",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.21",
     "postcss": "^8.4.49",
-    "prisma": "^5.22.0",
-    "tailwindcss": "^3.4.16",
-    "tsx": "^4.0.0",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5"
-  },
-  "overrides": {
-    "esbuild": "0.19.12"
-  },
-  "prisma": {
-    "seed": "tsx prisma/seed.ts"
   }
 }
